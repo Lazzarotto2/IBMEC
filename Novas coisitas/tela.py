@@ -48,7 +48,8 @@ class Tela:
         atributos = f"{aventureiro.nome} nv. {aventureiro.nivel} - " \
             f"Vida: {aventureiro.vida} / Força: {aventureiro.forca} / Defesa: {aventureiro.defesa}"
         texto = self.fonte_peq.render(atributos, True, CORES.branco)
-        self.display.blit(texto, [(LARGURA-texto.get_width())//2, ALTURA - MARGEM - texto.get_height()])
+        self.display.blit(texto, [(LARGURA-texto.get_width())//2, ALTURA - MARGEM - texto.get_height()]) # Usei pra modificar a posição do texto essa função do get_width
+        
 
         texto = self.fonte_peq.render(aventureiro.status, True, CORES.branco)
         self.display.blit(texto, [MARGEM, MARGEM])
